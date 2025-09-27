@@ -122,7 +122,7 @@ const Navbar = () => {
               CONTACT
             </button>
             <button className="bg-[rgb(0,191,255)] text-base tracking-widest text-white font-medium py-2 px-12 rounded font-monomaniac">
-              <a href="/resume.pdf" download="CD_Resume" className="w-full h-full" onClick={sendDownloadNotification}>
+              <a href="/derrickresume.pdf" download="Derrick_Resume" className="w-full h-full" onClick={sendDownloadNotification}>
                 Get Resume
               </a>
             </button>
