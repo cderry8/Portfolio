@@ -13,6 +13,7 @@
     "@fontsource/lobster": "^5.2.8",
     "@fontsource/monomaniac-one": "^5.2.7",
     "@fontsource/roboto": "^5.2.8",
+    "@vercel/analytics": "^1.5.0",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.23.19",
     "lottie-react": "^2.4.1",

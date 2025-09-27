@@ -70,8 +70,7 @@ const Navbar = () => {
           <div className='hidden md:flex bg-transparent text-base cursor-pointer hover:bg-[rgb(0,191,255)] text-[rgb(0,191,255)] font-medium hover:text-white py-2 px-4 border-2 border-[rgb(0,191,255)] rounded mr-4'>
             <button className='tracking-widest font-monomaniac'>
               <a
-                href="/resume.pdf"
-                download="CD_Resume"
+                href="/derrickresume.pdf"
                 className="w-full h-full"
                 onClick={sendDownloadNotification} // Call the function on click
               >
@@ -122,7 +121,7 @@ const Navbar = () => {
               CONTACT
             </button>
             <button className="bg-[rgb(0,191,255)] text-base tracking-widest text-white font-medium py-2 px-12 rounded font-monomaniac">
-              <a href="/derrickresume.pdf" download="Derrick_Resume" className="w-full h-full" onClick={sendDownloadNotification}>
+              <a href="/derrickresume.pdf" className="w-full h-full" onClick={sendDownloadNotification}>
                 Get Resume
               </a>
             </button>
