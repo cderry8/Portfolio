@@ -1,84 +1,48 @@
 "use client";
-import { useState, useEffect } from 'react';
-import Link from 'next/link'; 
-import Navbar from '@/components/reusable/Navbar'; 
-import '@fontsource/monomaniac-one';
-import '@fontsource/inter';
-import { FaExternalLinkAlt } from 'react-icons/fa';
-import { projectsData } from '../../components/data/projects'; 
-import { motion } from 'framer-motion';
 
-export default function Projects() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [hasLoaded, setHasLoaded] = useState(false); 
+import { useMemo, useState } from "react";
+import { motion } from "framer-motion";
+import { projectsData } from "@/components/data/projects";
+import ProjectsFilterField from "@/components/projects/ProjectsFilterField";
+import ProjectMosaicCard from "@/components/projects/ProjectMosaicCard";
 
-  const filteredProjects = projectsData.filter((project) =>
-    project.title.toLowerCase().includes(searchQuery.toLowerCase())
+export default function ProjectsPage() {
+  const [q, setQ] = useState("");
+
+  const filtered = useMemo(
+    () =>
+      projectsData.filter(
+        (p) =>
+          p.title.toLowerCase().includes(q.toLowerCase()) ||
+          p.description.toLowerCase().includes(q.toLowerCase()) ||
+          (p.role || "").toLowerCase().includes(q.toLowerCase())
+      ),
+    [q]
   );
 
-
-  useEffect(() => {
-    setHasLoaded(true);
-  }, []);
-
   return (
-    <div className="bg-gradient-to-r from-[#081b29] via-[#0a0a0a] to-[#0a0a0a] overflow-hidden">
-      <Navbar />
-      <section id="projects" className="min-h-screen pt-[180px] mx-auto p-10">
-        <div className="mb-12 flex justify-center">
-          <input
-            type="text"
-            placeholder="Search Projects..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="p-3 w-1/2 sm:w-1/3 rounded-xl bg-black/50 text-white border-2 border-[rgb(0,191,255)] focus:outline-none focus:border-[rgb(0,191,255)]"
-          />
-        </div>
+    <div className="page-shell pb-24 pt-24">
+      <motion.header initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-500/90">Work</p>
+        <h1 className="font-heading mt-3 text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl">Projects</h1>
+        <p className="mt-4 max-w-xl text-sm text-zinc-500">
+          Case studies with stack, outcomes, and in-portfolio previews. Use search to filter by name or role.
+        </p>
+      </motion.header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filteredProjects.length > 0 ? (
-            filteredProjects.map((project, index) => (
-              <motion.div
-                key={project.id} 
-                className="bg-black/50 backdrop-blur-xl p-6 rounded-xl border-2 border-[rgb(0,191,255)] text-white hover:-translate-y-1.5 transition-transform duration-300"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: hasLoaded ? 1 : 0, y: hasLoaded ? 0 : 50 }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                  ease: 'easeOut',
-                }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }} 
-              >
-                <h5 className="text-xl tracking-widest font-monomaniac font-medium mb-4">{project.title}</h5>
-                <p className="text-sm text-gray-300 font-inter mb-4">{project.description}</p>
+      <div className="mt-10">
+        <ProjectsFilterField value={q} onChange={setQ} />
+      </div>
 
-                <div className="flex justify-between items-center">
-                  <Link
-                    href={project.detailsUrl}
-                    className="text-[rgb(0,191,255)] font-medium text-base hover:text-white"
-                  >
-                    View Details
-                  </Link>
-                 
-                 
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[rgb(0,191,255)] hover:text-white font-medium flex items-center"
-                  >
-                    Live Site <FaExternalLinkAlt className="ml-2" />
-                  </a>
-                </div>
-              </motion.div>
-            ))
-          ) : (
-            <p className="text-white text-center col-span-4">No projects found</p>
-          )}
-        </div>
-      </section>
+      <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {filtered.length ? (
+          filtered.map((project, index) => (
+            <ProjectMosaicCard key={project.id} project={project} index={index} visible />
+          ))
+        ) : (
+          <p className="col-span-full py-16 text-center text-sm text-zinc-500">No matches.</p>
+        )}
+      </div>
     </div>
   );
 }
