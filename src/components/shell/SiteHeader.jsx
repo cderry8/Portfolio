@@ -125,7 +125,7 @@ export default function SiteHeader() {
               );
             })}
             <a
-              href="/derrickresume.pdf"
+              href="/derrickcv.pdf"
               onClick={() => {
                 notifyResumeDownload();
                 setOpen(false);
