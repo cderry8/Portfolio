@@ -76,7 +76,7 @@ export default function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <a
-            href="/derrickresume.pdf"
+            href="/derrickcv.pdf"
             onClick={notifyResumeDownload}
             className="hidden rounded-lg border border-zinc-600/80 bg-zinc-800/50 px-3 py-2 text-xs font-semibold text-zinc-200 transition hover:border-emerald-500/40 hover:text-emerald-300 sm:inline-flex"
           >
