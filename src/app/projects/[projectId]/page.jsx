@@ -126,7 +126,7 @@ export default function ProjectDetailsPage() {
           </section>
         ) : (
           <div className="rounded-2xl border border-dashed border-zinc-800 bg-zinc-900/30 p-6 text-center text-xs text-zinc-600">
-            Add a YouTube <code className="text-emerald-500/80">videoUrl</code> in project data to show a video here.
+            No <code className="text-emerald-500/80">video</code> For This Project.
           </div>
         )}
 
@@ -144,7 +144,7 @@ export default function ProjectDetailsPage() {
         </section>
 
         <section>
-          <h2 className="font-heading text-lg font-semibold text-zinc-100">Stack</h2>
+          <h2 className="font-heading text-lg font-semibold text-zinc-100">Tech Stack</h2>
           <div className="mt-4 flex flex-wrap gap-2">
             {project.technologies.map((t) => (
               <span

@@ -1,3 +1,4 @@
+import { FaBootstrap } from "react-icons/fa";
 import {
   Html,
   Css,
@@ -17,6 +18,7 @@ import {
   AWS,
   Python,
 } from "./technologies";
+import css from "styled-jsx/css";
 
 /** @typedef {'live' | 'maintenance' | 'concept' | 'demo'} ProjectStatus */
 
@@ -30,12 +32,12 @@ export const projectsData = [
     repoUrl: "https://github.com/cderry8/adrien-business-group-ltd",
     githubUrl: "https://github.com/cderry8/adrien-business-group-ltd",
     videoUrl: "",
-    detailsUrl: "/projects/11",
+    detailsUrl: "/projects/1",
     year: 2025,
     role: "Full-stack engineer",
     status: "live",
   highlights: ["Next.js", "Node.js & Express", "MongoDB", "Admin Dashboard", "REST API", "Animations"],
-    technologies: [Next, NodeJS, Tailwind , MongoDB , Express],
+    technologies: [Next, NodeJS, JavaScript, Tailwind , MongoDB , Express , Git],
     images: ["/adrien/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
     additionalInfo:
       "Designed and developed a full professional website for Adrien Business Group Ltd, a Rwandan construction and real estate company. The site highlights the company's services, completed projects, and news updates with smooth page animations for a polished user experience. Built a custom admin dashboard connected to a Node.js + Express backend and MongoDB database, allowing the client to independently add new projects, publish news, and manage all site content without touching code. The frontend was built with Next.js for fast page loads and clean routing. Delivered a complete, production-ready product from design to deployment.",
@@ -49,13 +51,13 @@ export const projectsData = [
     repoUrl: "https://github.com/cderry8/adrien-business-group-ltd",
     githubUrl: "https://github.com/cderry8/adrien-business-group-ltd",
     videoUrl: "",
-    detailsUrl: "/projects/11",
-    year: 2025,
+    detailsUrl: "/projects/2",
+    year: 2023,
     role: "Full-stack engineer",
     status: "live",
   highlights: ["Next.js", "Node.js & Express", "MongoDB", "Admin Dashboard", "REST API", "Animations"],
     technologies: [Next, NodeJS, Tailwind , MongoDB , Express],
-    images: ["/adrien/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
+    images: ["/mofix/1.png", "/mofix/2.png","/mofix/3.png","/mofix/4.png","/mofix/5.png",],
     additionalInfo:
       "Designed and developed a full professional website for Adrien Business Group Ltd, a Rwandan construction and real estate company. The site highlights the company's services, completed projects, and news updates with smooth page animations for a polished user experience. Built a custom admin dashboard connected to a Node.js + Express backend and MongoDB database, allowing the client to independently add new projects, publish news, and manage all site content without touching code. The frontend was built with Next.js for fast page loads and clean routing. Delivered a complete, production-ready product from design to deployment.",
   },
@@ -74,7 +76,7 @@ export const projectsData = [
     status: "live",
   highlights: ["Next.js", "Node.js & Express", "MongoDB", "Admin Dashboard", "REST API", "Animations"],
     technologies: [Next, NodeJS, Tailwind , MongoDB , Express],
-    images: ["/adrien/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
+    images: ["/trackix/1.png", "/trackix/2.png","/trackix/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
     additionalInfo:
       "Designed and developed a full professional website for Adrien Business Group Ltd, a Rwandan construction and real estate company. The site highlights the company's services, completed projects, and news updates with smooth page animations for a polished user experience. Built a custom admin dashboard connected to a Node.js + Express backend and MongoDB database, allowing the client to independently add new projects, publish news, and manage all site content without touching code. The frontend was built with Next.js for fast page loads and clean routing. Delivered a complete, production-ready product from design to deployment.",
   },
@@ -93,7 +95,7 @@ export const projectsData = [
     status: "live",
   highlights: ["Next.js", "Node.js & Express", "MongoDB", "Admin Dashboard", "REST API", "Animations"],
     technologies: [Next, NodeJS, Tailwind , MongoDB , Express],
-    images: ["/adrien/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
+    images: ["/inix/1.png", "/inix/2.png","/inix/3.png","/inix/4.png","/inix/5.png","/inix/6.png","/inix/7.png",],
     additionalInfo:
       "Designed and developed a full professional website for Adrien Business Group Ltd, a Rwandan construction and real estate company. The site highlights the company's services, completed projects, and news updates with smooth page animations for a polished user experience. Built a custom admin dashboard connected to a Node.js + Express backend and MongoDB database, allowing the client to independently add new projects, publish news, and manage all site content without touching code. The frontend was built with Next.js for fast page loads and clean routing. Delivered a complete, production-ready product from design to deployment.",
   },
@@ -112,7 +114,7 @@ export const projectsData = [
     status: "live",
   highlights: ["Next.js", "Node.js & Express", "MongoDB", "Admin Dashboard", "REST API", "Animations"],
     technologies: [Next, NodeJS, Tailwind , MongoDB , Express],
-    images: ["/adrien/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
+    images: ["/boobix/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
     additionalInfo:
       "Designed and developed a full professional website for Adrien Business Group Ltd, a Rwandan construction and real estate company. The site highlights the company's services, completed projects, and news updates with smooth page animations for a polished user experience. Built a custom admin dashboard connected to a Node.js + Express backend and MongoDB database, allowing the client to independently add new projects, publish news, and manage all site content without touching code. The frontend was built with Next.js for fast page loads and clean routing. Delivered a complete, production-ready product from design to deployment.",
   },
@@ -130,14 +132,14 @@ export const projectsData = [
     status: "live",
   highlights: ["Next.js", "Node.js & Express", "MongoDB", "Admin Dashboard", "REST API", "Animations"],
     technologies: [Next, NodeJS, Tailwind , MongoDB , Express],
-    images: ["/adrien/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
+    images: ["/mystix/3.png", "/mystix/2.png","/mystix/1.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
     additionalInfo:
       "Designed and developed a full professional website for Adrien Business Group Ltd, a Rwandan construction and real estate company. The site highlights the company's services, completed projects, and news updates with smooth page animations for a polished user experience. Built a custom admin dashboard connected to a Node.js + Express backend and MongoDB database, allowing the client to independently add new projects, publish news, and manage all site content without touching code. The frontend was built with Next.js for fast page loads and clean routing. Delivered a complete, production-ready product from design to deployment.",
   },
 
   {
     id: 7,
-    title: "GEI",
+    title: "UTF",
     description: "Business website for Adrien Business Group Ltd — a construction company. Built with Next.js and Node.js, featuring smooth animations and a custom admin dashboard to manage projects and news.",
     liveUrl: "https://www.adrienbusinessgroup.com/",
     repoUrl: "https://github.com/cderry8/adrien-business-group-ltd",
@@ -156,20 +158,20 @@ export const projectsData = [
   {
     id: 8,
     title: "HOMEHUB",
-    description: "Business website for Adrien Business Group Ltd — a construction company. Built with Next.js and Node.js, featuring smooth animations and a custom admin dashboard to manage projects and news.",
-    liveUrl: "https://www.adrienbusinessgroup.com/",
+    description: "Business website developed for HomeHub, a real estate company. The site features a modern design with smooth animations, showcasing property listings and company information. Built with html,css,js for fast performance and php backend for content management.",
+    liveUrl: "",
     repoUrl: "https://github.com/cderry8/adrien-business-group-ltd",
     githubUrl: "https://github.com/cderry8/adrien-business-group-ltd",
     videoUrl: "",
-    detailsUrl: "/projects/11",
-    year: 2025,
+    detailsUrl: "/projects/8",
+    year: 2023,
     role: "Full-stack engineer",
-    status: "live",
-  highlights: ["Next.js", "Node.js & Express", "MongoDB", "Admin Dashboard", "REST API", "Animations"],
-    technologies: [Next, NodeJS, Tailwind , MongoDB , Express],
-    images: ["/adrien/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
+    status: "Pending deployment",
+  highlights: ["HTML", "CSS", "JavaScript", "PHP", "SQL", "Animations"],
+    technologies: [Html, Css , JavaScript , SQL , Git],
+    images: ["/homehub/1.png", "/homehub/2.png","/homehub/3.png","/homehub/4.png","/homehub/5.png","/homehub/6.png",],
     additionalInfo:
-      "Designed and developed a full professional website for Adrien Business Group Ltd, a Rwandan construction and real estate company. The site highlights the company's services, completed projects, and news updates with smooth page animations for a polished user experience. Built a custom admin dashboard connected to a Node.js + Express backend and MongoDB database, allowing the client to independently add new projects, publish news, and manage all site content without touching code. The frontend was built with Next.js for fast page loads and clean routing. Delivered a complete, production-ready product from design to deployment.",
+      "Designed and developed a full professional website for HomeHub, a real estate company. The site highlights the company's property listings, services, and contact information with smooth page animations for an engaging user experience. Built with a custom PHP backend and SQL database for easy content management, allowing the client to independently add new properties and update site content without touching code. The frontend was built with HTML, CSS, and JavaScript for fast performance and a modern design. Delivered a complete, production-ready product from design to deployment.",
   },
   {
     id: 9,
@@ -185,7 +187,7 @@ export const projectsData = [
     status: "live",
   highlights: ["Next.js", "Node.js & Express", "MongoDB", "Admin Dashboard", "REST API", "Animations"],
     technologies: [Next, NodeJS, Tailwind , MongoDB , Express],
-    images: ["/adrien/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
+    images: ["/shopix/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
     additionalInfo:
       "Designed and developed a full professional website for Adrien Business Group Ltd, a Rwandan construction and real estate company. The site highlights the company's services, completed projects, and news updates with smooth page animations for a polished user experience. Built a custom admin dashboard connected to a Node.js + Express backend and MongoDB database, allowing the client to independently add new projects, publish news, and manage all site content without touching code. The frontend was built with Next.js for fast page loads and clean routing. Delivered a complete, production-ready product from design to deployment.",
   },
@@ -203,28 +205,11 @@ export const projectsData = [
     status: "live",
   highlights: ["Next.js", "Node.js & Express", "MongoDB", "Admin Dashboard", "REST API", "Animations"],
     technologies: [Next, NodeJS, Tailwind , MongoDB , Express],
-    images: ["/adrien/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
+    images: ["/target/1.png", "/target/2.png","/target/3.png","/target/4.png","/target/5.png","/target/6.png","/target/7.png",],
     additionalInfo:
       "Designed and developed a full professional website for Adrien Business Group Ltd, a Rwandan construction and real estate company. The site highlights the company's services, completed projects, and news updates with smooth page animations for a polished user experience. Built a custom admin dashboard connected to a Node.js + Express backend and MongoDB database, allowing the client to independently add new projects, publish news, and manage all site content without touching code. The frontend was built with Next.js for fast page loads and clean routing. Delivered a complete, production-ready product from design to deployment.",
   },
-  {
-    id: 11,
-    title: "ADRIEN",
-    description: "Business website for Adrien Business Group Ltd — a construction company. Built with Next.js and Node.js, featuring smooth animations and a custom admin dashboard to manage projects and news.",
-    liveUrl: "https://www.adrienbusinessgroup.com/",
-    repoUrl: "https://github.com/cderry8/adrien-business-group-ltd",
-    githubUrl: "https://github.com/cderry8/adrien-business-group-ltd",
-    videoUrl: "",
-    detailsUrl: "/projects/11",
-    year: 2025,
-    role: "Full-stack engineer",
-    status: "live",
-  highlights: ["Next.js", "Node.js & Express", "MongoDB", "Admin Dashboard", "REST API", "Animations"],
-    technologies: [Next, NodeJS, Tailwind , MongoDB , Express],
-    images: ["/adrien/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
-    additionalInfo:
-      "Designed and developed a full professional website for Adrien Business Group Ltd, a Rwandan construction and real estate company. The site highlights the company's services, completed projects, and news updates with smooth page animations for a polished user experience. Built a custom admin dashboard connected to a Node.js + Express backend and MongoDB database, allowing the client to independently add new projects, publish news, and manage all site content without touching code. The frontend was built with Next.js for fast page loads and clean routing. Delivered a complete, production-ready product from design to deployment.",
-  },
+  
 {
     id: 12,
     title: "OIL SITE",
@@ -239,7 +224,7 @@ export const projectsData = [
     status: "live",
   highlights: ["Next.js", "Node.js & Express", "MongoDB", "Admin Dashboard", "REST API", "Animations"],
     technologies: [Next, NodeJS, Tailwind , MongoDB , Express],
-    images: ["/adrien/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
+    images: ["/oilsite/3.png", "/oilsite/2.png","/oilsite/1.png","/oilsite/4.png","/oilsite/5.png","/oilsite/6.png","/oilsite/7.png",],
     additionalInfo:
       "Designed and developed a full professional website for Adrien Business Group Ltd, a Rwandan construction and real estate company. The site highlights the company's services, completed projects, and news updates with smooth page animations for a polished user experience. Built a custom admin dashboard connected to a Node.js + Express backend and MongoDB database, allowing the client to independently add new projects, publish news, and manage all site content without touching code. The frontend was built with Next.js for fast page loads and clean routing. Delivered a complete, production-ready product from design to deployment.",
   },
@@ -275,7 +260,7 @@ export const projectsData = [
     status: "live",
   highlights: ["Next.js", "Node.js & Express", "MongoDB", "Admin Dashboard", "REST API", "Animations"],
     technologies: [Next, NodeJS, Tailwind , MongoDB , Express],
-    images: ["/adrien/1.png", "/adrien/2.png","/adrien/3.png","/adrien/4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
+    images: ["/umurava/umurava2.png", "/umurava/umurava1.png","/umurava/umurava3.png","/umurava/umurava4.png","/adrien/5.png","/adrien/6.png","/adrien/7.png",],
     additionalInfo:
       "Designed and developed a full professional website for Adrien Business Group Ltd, a Rwandan construction and real estate company. The site highlights the company's services, completed projects, and news updates with smooth page animations for a polished user experience. Built a custom admin dashboard connected to a Node.js + Express backend and MongoDB database, allowing the client to independently add new projects, publish news, and manage all site content without touching code. The frontend was built with Next.js for fast page loads and clean routing. Delivered a complete, production-ready product from design to deployment.",
   },

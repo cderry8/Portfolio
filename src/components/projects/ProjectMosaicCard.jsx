@@ -29,7 +29,7 @@ export default function ProjectMosaicCard({ project, index = 0, visible = true }
       className="surface-card flex flex-col overflow-hidden rounded-2xl"
     >
       <div className="relative aspect-[16/10] border-b border-zinc-800/90">
-        <Image src={thumb} alt="" fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover" />
+        <Image src={thumb} alt="" fill sizes="(max-width:768px) 100vw, 33vw" className="object-fill" />
         <div className="absolute left-3 top-3 flex flex-wrap gap-2">
           <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ring-1 ${badge}`}>
             {status}
